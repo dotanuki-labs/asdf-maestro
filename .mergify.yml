@@ -1,0 +1,34 @@
+# Adapted from https://doc.mergify.io/examples.html#running-ci-pipelines-automatically
+# Validate your changes with:
+#   $ curl -F 'data=@.mergify.yml' https://gh.mergify.io/validate/
+
+pull_request_rules:
+  - name: Automatic merges for Renovate pull requests
+    conditions:
+      - author~=^renovate\[bot\]$
+      - check-success=security-analysis
+      - check-success=test-results-analysis
+      - check-success=app-size-analysis
+    actions:
+      merge:
+        method: squash
+
+  - name: Automatic merges for Dotanukibot pull requests
+    conditions:
+      - author~=^dotanukibot
+      - check-success=security-analysis
+      - check-success=test-results-analysis
+      - check-success=app-size-analysis
+    actions:
+      merge:
+        method: squash
+
+  - name: Be author's friend
+    conditions:
+      - author~=^ubiratansoares
+      - check-success=security-analysis
+      - check-success=test-results-analysis
+      - check-success=app-size-analysis
+    actions:
+      merge:
+        method: squash
