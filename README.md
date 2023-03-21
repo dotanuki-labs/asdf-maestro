@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/github/license/dotanuki-labs/asdf-maestro)](https://choosealicense.com/licenses/mit)
 
 
-A [maestro](https://github.com/mobile-dev-inc/maestro) plugin for the [asdf](https://github.com/asdf-vm/asdf).
+A [maestro](https://github.com/mobile-dev-inc/maestro) plugin for [asdf](https://github.com/asdf-vm/asdf).
 
 
 ## Installing
@@ -25,19 +25,22 @@ Managing `maestro` with `asdf`:
 # Show all installable versions
 $> asdf list-all maestro
 
-# Install specific version
+# Download the latest version
 $> asdf install maestro latest
 
-# Set a version globally (on your ~/.tool-versions file)
-$> asdf global maestro latest
+# Define the latest version for your local project (writes <project>/.tool-versions)
+$> asdf local maestro latest
 
 # Now maestro commands are available
 $> maestro --version
+
+# Rollback/install a previous version
+$> asdf install maestro 1.24.0
+$> asdf local maestro 1.24.0
+
 ```
 
-## Additional information
-
-Check [asdf official documentation](https://asdf-vm.com/).
+You may also want to check the [official documentation](https://asdf-vm.com/) to learn more about `asdf`.
 
 ## License
 
