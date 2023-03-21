@@ -1,61 +1,45 @@
-<div align="center">
+# asdf-maestro
 
-# asdf-maestro [![Build](https://github.com/dotanuki-labs/asdf-maestro/actions/workflows/build.yml/badge.svg)](https://github.com/dotanuki-labs/asdf-maestro/actions/workflows/build.yml) [![Lint](https://github.com/dotanuki-labs/asdf-maestro/actions/workflows/lint.yml/badge.svg)](https://github.com/dotanuki-labs/asdf-maestro/actions/workflows/lint.yml)
+[![CI](https://github.com/dotanuki-labs/asdf-maestro/actions/workflows/ci.yml/badge.svg)](https://github.com/dotanuki-labs/asdf-maestro/actions/workflows/ci.yml)
+[![Code Style](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://shellcheck.net/)
+[![License](https://img.shields.io/github/license/dotanuki-labs/asdf-maestro)](https://choosealicense.com/licenses/mit)
 
 
-[maestro](https://github.com/mobile-dev-inc/maestro) plugin for the [asdf version manager](https://asdf-vm.com).
+A [maestro](https://github.com/mobile-dev-inc/maestro) plugin for the [asdf](https://github.com/asdf-vm/asdf).
 
-</div>
 
-# Contents
+## Installing
 
-- [Dependencies](#dependencies)
-- [Install](#install)
-- [Contributing](#contributing)
-- [License](#license)
+Installing this plugin:
 
-# Dependencies
-
-**TODO: adapt this section**
-
-- `bash`, `curl`, `tar`: generic POSIX utilities.
-- `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
-
-# Install
-
-Plugin:
-
-```shell
-asdf plugin add maestro
-# or
-asdf plugin add maestro https://github.com/dotanuki-labs/asdf-maestro.git
+```bash
+$> asdf plugin add maestro https://github.com/dotanuki-labs/asdf-maestro.git
 ```
 
-maestro:
+## Using
 
-```shell
+Managing `maestro` with `asdf`:
+
+```bash
+
 # Show all installable versions
-asdf list-all maestro
+$> asdf list-all maestro
 
 # Install specific version
-asdf install maestro latest
+$> asdf install maestro latest
 
 # Set a version globally (on your ~/.tool-versions file)
-asdf global maestro latest
+$> asdf global maestro latest
 
 # Now maestro commands are available
-maestro --version
+$> maestro --version
 ```
 
-Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
-install & manage versions.
+## Additional information
 
-# Contributing
+Check [asdf official documentation](https://asdf-vm.com/).
 
-Contributions of any kind welcome! See the [contributing guide](contributing.md).
+## License
 
-[Thanks goes to these contributors](https://github.com/dotanuki-labs/asdf-maestro/graphs/contributors)!
+Copyright (c) 2023 - Dotanuki Labs - [The MIT license](https://choosealicense.com/licenses/mit/)
 
-# License
-
-See [LICENSE](LICENSE) © [Ubiratan Soares](https://github.com/dotanuki-labs/)
