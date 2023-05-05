@@ -38,7 +38,7 @@ download_release() {
   filename="$2"
 
   # Eg : https://github.com/mobile-dev-inc/maestro/releases/download/cli-1.25.0/maestro.zip
-  url="$GH_REPO/releases/download/cli-{$version}/maestro.zip"
+  url="$GH_REPO/releases/download/cli-$version/maestro.zip"
 
   echo "* Downloading $TOOL_NAME release $version..."
   echo
